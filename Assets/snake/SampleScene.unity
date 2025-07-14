@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 456203568}
   - component: {fileID: 456203567}
   m_Layer: 0
-  m_Name: "v\xE4gg"
+  m_Name: "v\xE4gg 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 1042500085}
   - component: {fileID: 1042500084}
   m_Layer: 0
-  m_Name: "v\xE4gg"
+  m_Name: "v\xE4gg 3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 1346312892}
   - component: {fileID: 1346312891}
   m_Layer: 0
-  m_Name: "v\xE4gg"
+  m_Name: " v\xE4gg 4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
