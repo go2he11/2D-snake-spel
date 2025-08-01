@@ -1,29 +1,30 @@
-﻿using UnityEngine;
+﻿using UnityEngine; // Ger tillgång till Unitys funktioner, t.ex. MonoBehaviour, Collider2D, etc.
 
-public class Food : MonoBehaviour
+public class Food : MonoBehaviour // Klassen styr matobjektet i spelet
 {
-    public BoxCollider2D gridArea;
+    public BoxCollider2D gridArea; // Område där maten kan dyka upp – definierat i Unity-editorn
 
-    private void Start()
+    private void Start() // Körs automatiskt när spelet startar
     {
-        RandomizePosition();
+        RandomizePosition(); // Flyttar maten till en slumpmässig position i början
     }
 
-private void RandomizePosition()
-{
-    Bounds bounds = gridArea.bounds;
-
-    float x = Mathf.Floor(Random.Range(bounds.min.x, bounds.max.x));
-    float y = Mathf.Floor(Random.Range(bounds.min.y, bounds.max.y));
-
-    this.transform.position = new Vector3(x, y, 0.0f);
-}
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void RandomizePosition() // Metod för att placera maten på ett slumpmässigt ställe
     {
-        if (other.CompareTag("Player"))
+        Bounds bounds = gridArea.bounds; // Hämtar gränserna (min/max) för spelområdet
+
+        float x = Mathf.Floor(Random.Range(bounds.min.x, bounds.max.x)); // Slumpar ett heltal inom X-området
+        float y = Mathf.Floor(Random.Range(bounds.min.y, bounds.max.y)); // Slumpar ett heltal inom Y-området
+
+        this.transform.position = new Vector3(x, y, 0.0f); // Flyttar matens position till den slumpade punkten
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) // Körs när något kolliderar med maten
+    {
+        if (other.CompareTag("Player")) // Om det som träffar har taggen "Player" (ormen)
         {
-            RandomizePosition();
+            RandomizePosition(); // Flytta maten till en ny slumpmässig plats
         }
     }
 }
+
